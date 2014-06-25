@@ -3,5 +3,5 @@ DWScrollingViewController
 
 ScrollingViews
 
-![Screenshot](https://github.com/DrizzleWang-Z/DWScrollingViewController/blob/master/ScreenShot.gif)
+![Screenshot](https://raw.githubusercontent.com/DrizzleWang-Z/DWScrollingViewController/master/ScreenShot.gif)
 
