@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ContentViewController.h
 //  DWScrollingViewController
 //
 //  Created by Private on 6/25/14.
@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "ContentViewController.h"
 #import "DWScrollingViewController.h"
 
-@interface ViewController : UIViewController
-
+@interface ContentViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *viewContent;
 
 @end
-

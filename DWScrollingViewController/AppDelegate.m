@@ -18,6 +18,52 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    UITabBarController *tabBarView = [[UITabBarController alloc] init];
+    
+    //初始化所有的View
+    ContentViewController *contentViewController = [[ContentViewController alloc] initWithNibName:@"ContentViewController" bundle:nil];
+    [contentViewController setTitle:@"第1页"];
+    
+    ContentViewController *contentViewController2 = [[ContentViewController alloc] initWithNibName:@"ContentViewController" bundle:nil];
+    [contentViewController2 setTitle:@"第2页"];
+    
+    ContentViewController *contentViewController3 = [[ContentViewController alloc] initWithNibName:@"ContentViewController" bundle:nil];
+    [contentViewController3 setTitle:@"第3页"];
+    
+    ContentViewController *contentViewController4 = [[ContentViewController alloc] initWithNibName:@"ContentViewController" bundle:nil];
+    [contentViewController4 setTitle:@"第4页"];
+    
+    DWScrollingViewController *scrollingView = [[DWScrollingViewController alloc] initWithViewControllers:@[contentViewController, contentViewController2, contentViewController3, contentViewController4]];
+    scrollingView.title = @"首页";
+//    ViewController *view = [[ViewController alloc] init];
+    
+    //初始化所有的View
+    ContentViewController *contentViewController11 = [[ContentViewController alloc] initWithNibName:@"ContentViewController" bundle:nil];
+    [contentViewController11 setTitle:@"第1页"];
+    
+    ContentViewController *contentViewController12 = [[ContentViewController alloc] initWithNibName:@"ContentViewController" bundle:nil];
+    [contentViewController12 setTitle:@"第2页"];
+    
+    ContentViewController *contentViewController13 = [[ContentViewController alloc] initWithNibName:@"ContentViewController" bundle:nil];
+    [contentViewController13 setTitle:@"第3页"];
+    
+    ContentViewController *contentViewController14 = [[ContentViewController alloc] initWithNibName:@"ContentViewController" bundle:nil];
+    [contentViewController14 setTitle:@"第4页"];
+    
+    DWScrollingViewController *scrollingView2 = [[DWScrollingViewController alloc] initWithViewControllers:@[contentViewController11, contentViewController12, contentViewController13, contentViewController14]];
+    scrollingView2.title = @"设置";
+    
+    [tabBarView setViewControllers:@[scrollingView, scrollingView2]];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tabBarView];
+    self.window.backgroundColor = [UIColor whiteColor];
+    //    self.window.tintColor = COLOR_TINT;
+    [self.window setRootViewController:navigationController];
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

@@ -13,6 +13,10 @@
 		A0F815D5195A9CEA0096E62C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0F815D3195A9CEA0096E62C /* Main.storyboard */; };
 		A0F815D7195A9CEA0096E62C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0F815D6195A9CEA0096E62C /* Images.xcassets */; };
 		A0F815E3195A9CEB0096E62C /* DWScrollingViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F815E2195A9CEB0096E62C /* DWScrollingViewControllerTests.m */; };
+		A0F815F1195A9D0D0096E62C /* DWScrollingTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F815EE195A9D0D0096E62C /* DWScrollingTabController.m */; };
+		A0F815F2195A9D0D0096E62C /* DWScrollingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F815F0195A9D0D0096E62C /* DWScrollingViewController.m */; };
+		A0F815F6195A9D410096E62C /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F815F4195A9D410096E62C /* ContentViewController.m */; };
+		A0F815F7195A9D410096E62C /* ContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0F815F5195A9D410096E62C /* ContentViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,13 @@
 		A0F815DC195A9CEA0096E62C /* DWScrollingViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DWScrollingViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F815E1195A9CEB0096E62C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0F815E2195A9CEB0096E62C /* DWScrollingViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWScrollingViewControllerTests.m; sourceTree = "<group>"; };
+		A0F815ED195A9D0D0096E62C /* DWScrollingTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWScrollingTabController.h; sourceTree = "<group>"; };
+		A0F815EE195A9D0D0096E62C /* DWScrollingTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWScrollingTabController.m; sourceTree = "<group>"; };
+		A0F815EF195A9D0D0096E62C /* DWScrollingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWScrollingViewController.h; sourceTree = "<group>"; };
+		A0F815F0195A9D0D0096E62C /* DWScrollingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWScrollingViewController.m; sourceTree = "<group>"; };
+		A0F815F3195A9D410096E62C /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
+		A0F815F4195A9D410096E62C /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
+		A0F815F5195A9D410096E62C /* ContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +90,7 @@
 		A0F815C8195A9CEA0096E62C /* DWScrollingViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A0F815EC195A9D0D0096E62C /* DWScrollingViewController */,
 				A0F815CD195A9CEA0096E62C /* AppDelegate.h */,
 				A0F815CE195A9CEA0096E62C /* AppDelegate.m */,
 				A0F815D0195A9CEA0096E62C /* ViewController.h */,
@@ -86,6 +98,9 @@
 				A0F815D3195A9CEA0096E62C /* Main.storyboard */,
 				A0F815D6195A9CEA0096E62C /* Images.xcassets */,
 				A0F815C9195A9CEA0096E62C /* Supporting Files */,
+				A0F815F3195A9D410096E62C /* ContentViewController.h */,
+				A0F815F4195A9D410096E62C /* ContentViewController.m */,
+				A0F815F5195A9D410096E62C /* ContentViewController.xib */,
 			);
 			path = DWScrollingViewController;
 			sourceTree = "<group>";
@@ -114,6 +129,18 @@
 				A0F815E1195A9CEB0096E62C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A0F815EC195A9D0D0096E62C /* DWScrollingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A0F815ED195A9D0D0096E62C /* DWScrollingTabController.h */,
+				A0F815EE195A9D0D0096E62C /* DWScrollingTabController.m */,
+				A0F815EF195A9D0D0096E62C /* DWScrollingViewController.h */,
+				A0F815F0195A9D0D0096E62C /* DWScrollingViewController.m */,
+			);
+			name = DWScrollingViewController;
+			path = DWScrollingTabController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +225,7 @@
 			files = (
 				A0F815D5195A9CEA0096E62C /* Main.storyboard in Resources */,
 				A0F815D7195A9CEA0096E62C /* Images.xcassets in Resources */,
+				A0F815F7195A9D410096E62C /* ContentViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,9 +243,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0F815F1195A9D0D0096E62C /* DWScrollingTabController.m in Sources */,
 				A0F815D2195A9CEA0096E62C /* ViewController.m in Sources */,
+				A0F815F6195A9D410096E62C /* ContentViewController.m in Sources */,
 				A0F815CF195A9CEA0096E62C /* AppDelegate.m in Sources */,
 				A0F815CC195A9CEA0096E62C /* main.m in Sources */,
+				A0F815F2195A9D0D0096E62C /* DWScrollingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +364,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = DWScrollingViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -344,6 +376,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = DWScrollingViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
