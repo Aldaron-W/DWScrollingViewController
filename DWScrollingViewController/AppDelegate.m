@@ -27,7 +27,7 @@
     [contentViewController setTitle:@"第1页"];
     
     ContentViewController *contentViewController2 = [[ContentViewController alloc] initWithNibName:@"ContentViewController" bundle:nil];
-    [contentViewController2 setTitle:@"第2页"];
+    [contentViewController2 setTitle:@"第2页第2页第2页第2页"];
     
     ContentViewController *contentViewController3 = [[ContentViewController alloc] initWithNibName:@"ContentViewController" bundle:nil];
     [contentViewController3 setTitle:@"第3页"];

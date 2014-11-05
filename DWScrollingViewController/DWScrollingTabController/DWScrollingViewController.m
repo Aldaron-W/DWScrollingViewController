@@ -129,7 +129,6 @@
     
     if (((int)self.backgroundScrollView.contentOffset.x / (int)[UIScreen mainScreen].bounds.size.width) < self.selectedIndex) {
         positon = ((int)self.backgroundScrollView.contentOffset.x - self.selectedIndex * (int)[UIScreen mainScreen].bounds.size.width);
-        //        positon -= [UIScreen mainScreen].bounds.size.width;
     }
     else{
         positon = (int)self.backgroundScrollView.contentOffset.x - self.selectedIndex * (int)[UIScreen mainScreen].bounds.size.width;
@@ -158,9 +157,6 @@
         _topTabController.view.frame = CGRectMake(0, topTabControllerViewY, [UIScreen mainScreen].bounds.size.width, 36);
         [_topTabController.view setAutoresizingMask:UIViewAutoresizingNone];
         _topTabController.delegate = self;
-        //        [self addChildViewController:_topTabController];
-        //        [_topTabController didMoveToParentViewController:self];
-        //        [_topTabController setAutomaticallyAdjustsScrollViewInsets:NO];
         
         NSMutableArray *viewTitleArray = [[NSMutableArray alloc] initWithCapacity:3];
         
@@ -188,17 +184,6 @@
         _backgroundScrollView.showsHorizontalScrollIndicator = NO;
         _backgroundScrollView.showsVerticalScrollIndicator = NO;
         [_backgroundScrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width * [self.topTabController.selection count], _backgroundScrollView.frame.size.height)];
-//        [_backgroundScrollView setBackgroundColor:COLOR_BGIMG];
-        
-//        for (int i=0; i<[self.topTabController.selection count]; i++) {
-//            
-//            UIImageView *backgroundView = [[UIImageView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width * i,
-//                                                                                        (_backgroundScrollView.frame.size.height - 180)/2,
-//                                                                                        [UIScreen mainScreen].bounds.size.width, 180)];
-//            backgroundView.image = [UIImage imageNamed:@"DWImagePageBackground"];
-//            [backgroundView setContentMode:UIViewContentModeScaleAspectFill];
-//            [_backgroundScrollView addSubview:backgroundView];
-//        }
     }
     return _backgroundScrollView;
 }
@@ -213,38 +198,6 @@
 #pragma mark - Setters
 - (void)setSelectedIndex:(int)selectedIndex{
     _selectedIndex = selectedIndex;
-    
-    NSMutableArray *refreshViewIndex = [[NSMutableArray alloc] initWithCapacity:3];
-    
-    if ([[self.subviewObjectsArray objectAtIndex:_selectedIndex] respondsToSelector:@selector(reloadData)]) {
-        [[self.subviewObjectsArray objectAtIndex:_selectedIndex] reloadData];
-    }
-    
-//    //左右两页加载数据
-//    if (-1 < (_selectedIndex - 1)) {
-//        if ([[self.subviewObjectsArray objectAtIndex:(_selectedIndex - 1)] respondsToSelector:@selector(reloadData)]) {
-//            [[self.subviewObjectsArray objectAtIndex:(_selectedIndex - 1)] reloadData];
-//        }
-//        [refreshViewIndex addObject:[NSNumber numberWithInt:_selectedIndex - 1]];
-//    }
-//    [refreshViewIndex addObject:[NSNumber numberWithInt:_selectedIndex]];
-//    if ([self.subviewObjectsArray count] > (_selectedIndex + 1)) {
-//        if ([[self.subviewObjectsArray objectAtIndex:(_selectedIndex + 1)] respondsToSelector:@selector(reloadData)]) {
-//            [[self.subviewObjectsArray objectAtIndex:(_selectedIndex + 1)] reloadData];
-//        }
-//        [refreshViewIndex addObject:[NSNumber numberWithInt:_selectedIndex + 1]];
-//    }
-//    
-//    //其他页面清空数据
-//    for (int i=0; i<[self.subviewObjectsArray count]; i++) {
-//        if (i == [[refreshViewIndex objectAtIndex:0] intValue]) {
-//            i += [refreshViewIndex count]-1;
-//            continue;
-//        }
-//        if ([[self.subviewObjectsArray objectAtIndex:(i)] respondsToSelector:@selector(cleanData)]) {
-//            [[self.subviewObjectsArray objectAtIndex:(i)] cleanData];
-//        }
-//    }
 }
 
 @end

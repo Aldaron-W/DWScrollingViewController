@@ -283,13 +283,13 @@
             self.indicatorView.frame = buttonFrame;
         }
         else {
-            [UIView animateWithDuration:0.3f animations:^{
-                CGRect buttonFrame = button.frame;
-                buttonFrame.origin.x = self.indicatorView.frame.origin.x;
-                buttonFrame.origin.y = frame.size.height - 2;
-                buttonFrame.size.height = 2;
-                self.indicatorView.frame = buttonFrame;
-            }];
+//            [UIView animateWithDuration:0.3f animations:^{
+//                CGRect buttonFrame = button.frame;
+//                buttonFrame.origin.x = self.indicatorView.frame.origin.x;
+//                buttonFrame.origin.y = frame.size.height - 2;
+//                buttonFrame.size.height = 2;
+//                self.indicatorView.frame = buttonFrame;
+//            }];
         }
     }
     
@@ -352,7 +352,7 @@
         
         if (position > 0) {
             buttonFrame.size.width = currentButton.size.width + p * (nextButtonFrame.size.width - currentButton.size.width);
-            buttonFrame.origin.x = currentButton.origin.x + p * nextButtonFrame.size.width;
+            buttonFrame.origin.x = currentButton.origin.x + p * currentButton.size.width;
         }
         else{
             if (isAllPage == 0) {
